@@ -76,6 +76,7 @@ const getWebitData = async (webitURL) => {
   const response = await fetch(webitURL);
   try {
     let webitdata = await response.json();
+    
     const max = webitdata.data[0].max_temp;
     console.log('max temp:'+max);
     const min = webitdata.data[0].low_temp;
@@ -93,6 +94,16 @@ console.log(webitResult);
 
 
 //--------------postData--------------------------------------
-
+const postData = async (url = '', data = {}) => {
+  console.log(data);
+  const response = await fetch(url, {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+}
 
 export {performAction}

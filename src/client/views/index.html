@@ -14,7 +14,6 @@
     <input type="text" id="city" placeholder="Enter a city"required>
   </div>
   <br />
-
   <div class ="holder">
     <label for="departing">Departing date</label>
     <input type="date" id="departing" placeholder="Departing date" required>
@@ -31,9 +30,20 @@
 </form>
 <!-----end of the form -->
 
-      <div id="results">results
-        
-      </div>
+<!-----start the result for the trip -->
+<div>
+
+<img class="responsive" src=" " alt="" id="pixa">
+</div>
+<div id="results">
+  <h1  id="place"></h1>
+  <h1  id="departure"></h1>
+  <h1 >Your trip info:</h1> 
+  <h4 >The weather info for this location :</h4>
+<p id="weather "></p>
+  <p>Temprature High: <span id="max_temp"></span></p>
+  <p>Temprature Low:  <span id="min_temp"></span></p> 
+</div>
 <footer >
   <p>&copy Udacity   </p>
   <p>Eman Abo Alsoud July 2020</p>  
@@ -47,6 +57,6 @@
     });
   }
 </script>
-<script src="app.js" type="text/javascript"></script>
+
 </body>
 </html>  
